@@ -9,3 +9,10 @@ Partendo dalla consegna implementare quante più tecnologie non superflue che re
 * [x]  Minimal API
 * [ ] Unit Test
 * [ ] Dapper
+
+
+## TimeSheet
+
+| Day | Time | Tasks | Note
+|---|---|---|---|
+|23/04/2023| 3:30| From zero to ~~hero~~ working API| Task completato, nei prossimi giorni proverò a fare un po' di refactoring e ad implementare degli Unit Test |
