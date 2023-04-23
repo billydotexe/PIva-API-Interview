@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PIva.Api", "PIva.Api.csproj", "{F9768597-1E44-41BA-8219-BF6028749F68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9768597-1E44-41BA-8219-BF6028749F68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9768597-1E44-41BA-8219-BF6028749F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9768597-1E44-41BA-8219-BF6028749F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9768597-1E44-41BA-8219-BF6028749F68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8719C942-97BB-4DFD-9338-00F86F16358C}
+	EndGlobalSection
+EndGlobal
