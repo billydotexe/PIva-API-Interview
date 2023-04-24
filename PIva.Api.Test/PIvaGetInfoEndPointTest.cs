@@ -31,11 +31,11 @@ namespace PIva.Api.Test
 
             // Act
             var result = await httpClient.GetAsync($"/iva/{vat}");
-            var ivaData = await result.Content.ReadFromJsonAsync<Iva>();
+            var ivaResult = await result.Content.ReadFromJsonAsync<Iva>();
 
             // Assert
             result.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);
-            ivaData.Should().BeEquivalentTo(iva);
+            ivaResult.Should().BeEquivalentTo(iva);
 
         }
 
@@ -71,6 +71,22 @@ namespace PIva.Api.Test
             result.StatusCode.Should().Be(System.Net.HttpStatusCode.BadRequest);
             error.Should().Be("Country code not supported.");
 
+        }
+
+        [Fact]
+        public async Task GetIvaAsync_ReturnsBadRequest_IfVatIsLessThanFourchar()
+        {
+            // Arrange
+            var httpClient = _factory.CreateClient();
+            string vat = "aaa";
+
+            // Act
+            var result = await httpClient.GetAsync($"/iva/{vat}");
+            var error = await result.Content.ReadFromJsonAsync<string>();
+
+            // Assert
+            result.StatusCode.Should().Be(System.Net.HttpStatusCode.BadRequest);
+            error.Should().Be("VAT number cannot be shorter than 4 characters.");
         }
     }
 }

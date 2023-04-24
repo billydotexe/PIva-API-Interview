@@ -41,12 +41,9 @@ namespace PIva.Api.Services
                 var tds = tr.QuerySelectorAll("td");
                 foreach (var prop in iva.GetType().GetProperties())
                 {
-                    if (tds.First().QuerySelector("strong").InnerHtml.Replace(" ", "") == prop.Name)
+                    if (tds.First().QuerySelector("strong").InnerHtml.Replace(" ", "").ToLower() == prop.Name.ToLower())
                     {
-                        if (prop.PropertyType == typeof(int))
-                            prop.SetValue(iva, int.Parse(tds.Last().InnerHtml));
-                        else
-                            prop.SetValue(iva, tds.Last().InnerHtml);
+                        prop.SetValue(iva, tds.Last().InnerHtml);
                     }
 
                 }
