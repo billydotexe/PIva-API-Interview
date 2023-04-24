@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PIva.Api", "PIva.Api.csproj", "{F9768597-1E44-41BA-8219-BF6028749F68}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PIva.Api.Test", "..\PIva.Api.Test\PIva.Api.Test.csproj", "{C58C2594-EE64-4690-9891-3499CA11A9A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F9768597-1E44-41BA-8219-BF6028749F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9768597-1E44-41BA-8219-BF6028749F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9768597-1E44-41BA-8219-BF6028749F68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C58C2594-EE64-4690-9891-3499CA11A9A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C58C2594-EE64-4690-9891-3499CA11A9A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C58C2594-EE64-4690-9891-3499CA11A9A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C58C2594-EE64-4690-9891-3499CA11A9A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
