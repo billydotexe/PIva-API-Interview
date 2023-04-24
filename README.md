@@ -7,8 +7,8 @@ Implementare una API che preso in input un parametro stringa restituisca le info
 Partendo dalla consegna implementare quante più tecnologie non superflue che reputo utili ma che non ho mai usato:
 
 * [x]  Minimal API
-* [ ] Unit Test
-* [ ] Dapper
+* [x] Unit Test
+* [ ] MediatR
 
 
 ## TimeSheet
