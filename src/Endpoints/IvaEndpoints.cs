@@ -1,4 +1,5 @@
-﻿using PIva.Api.Endpoints.Internal;
+﻿using MediatR;
+using PIva.Api.Endpoints.Internal;
 using PIva.Api.Models;
 using PIva.Api.Services;
 
@@ -6,6 +7,7 @@ namespace PIva.Api.Endpoints
 {
     public class IvaEndpoints : IEndpoints
     {
+        
         public static void AddServices(IServiceCollection services, IConfiguration config)
         {
             services.AddHttpClient<IbanService>();
@@ -19,12 +21,12 @@ namespace PIva.Api.Endpoints
                 .Produces<string>(StatusCodes.Status400BadRequest);
         }
 
-        internal static async Task<IResult> GetIvaAsync(string vat, IVatRequester requester)
+        internal static async Task<IResult> GetIvaAsync(string vat, IMediator mediator)
         {
-            var iva = await requester.GetIva(vat);
-            if (iva.IsSuccessful)
-                return Results.Ok(iva.Value);
-            return Results.BadRequest(iva.Error.Message);
+            var query = new GetPIvaQuery(vat);
+            var result = await mediator.Send(query);
+
+            return result;
         }
     }
 }
